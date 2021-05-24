@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimientos RPA Mia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- START FORM BODY -->
+    <div id="container">
+      <header>
+        <h1>MIA Bot Factory 🤖</h1>
+        <h2>Planilla de requerimientos para RPAs</h2>
+      </header>
+      
+      <form name="contact" method="POST" data-netlify="true">
+        <fieldset>
+          <legend>Campos con * son imprescindible </legend>
+          <br/>
+
+          <!-- START DIV part-1 PERSONAL INFORMATION -->
+          <div id="part-1">
+            <h2>Informacion General</h2>
+            <label for="pname">Nombre Peticionario</label>
+            <input type="text" name="pname" id="pname" required>
+            <br/>
+            <label for="rname">Nombre Robot</label>
+            <input type="text" name="rname" id="rname" required> 
+            <br/>
+            <label for="volumen">Volumetria por dia</label>
+            <input type="number" name="volumen" min="0" max="100000" id="volumen" required>
+            <br/>
+            <label for="gender">Frecuencia</label>
+            <br/>
+            <input type="radio" name="frecuencia" value="repetida" id="gender" required>Diaria Repetida
+            <br/>
+            <input type="radio" name="frecuencia" value="puntual" required>Diaria Puntual
+            <br/>
+            <input type="radio" name="frecuencia" value="semanal" required>Semanal
+            <br/>
+            <input type="radio" name="frecuencia" value="otra" required>Other
+            <br/><br/>
+            <label for="horario">Seleccionar Hora:</label>
+            <br/>
+            <select name="horario[]" id="horario" required>
+              <option value="" label="Seleccionar hora preferida de ejecución" selected="selected">Seleccionar hora preferida de ejecución …       </option>
+              <option value="0">00:00</option>
+              <option value="1">01:00</option>
+              <option value="2">02:00</option>
+              <option value="3">03:00</option>
+              <option value="4">04:00</option>
+              <option value="5">05:00</option>
+              <option value="6">06:00</option>
+              <option value="7">07:00</option>
+              <option value="8">08:00</option>
+              <option value="9">09:00</option>
+              <option value="10">10:00</option>
+              <option value="11">11:00</option>
+              <option value="12">12:00</option>
+              <option value="13">13:00</option>
+              <option value="14">14:00</option>
+              <option value="15">15:00</option>
+              <option value="16">16:00</option>
+              <option value="17">17:00</option>
+              <option value="18">18:00</option>
+              <option value="19">19:00</option>
+              <option value="20">20:00</option>
+              <option value="21">21:00</option>
+              <option value="22">22:00</option>
+              <option value="23">23:00</option>
+              <option value="24">24:00</option>
+            </select>
+          </div>
+          <!-- END DIV part-1 PERSONAL INFORMATION -->
+          <br/>
+
+       	  <!-- START DIV part-2 ACCOUNT INFORMATION -->
+          <div id="part-2">
+            <h2>Información Adiconal (opcional)</h2>
+            <p>Su e-mail</p>
+            <input type="email" name="email" placeholder="account@email.com" id="email">
+          </div>
+          <!-- END DIV part-2 ACCOUNT INFORMATION -->
+          
+          <!-- START DIV part-3 OTHER INFORMATION -->
+          <div id="part-3">
+            <label for="message">Algo que nos pueda ayudar a producir una mejor solucion?</label>
+            <br/>
+            <textarea rows="5" cols="50" id="message" tabindex="-1" name="mensaje"></textarea>
+          </div>
+          <!-- END DIV part-3 ACCOUNT INFORMATION -->
+          <br/><br/>
+          <input type="submit" id="submitButton" name="submitButton" value="Enviar Peticion" type="submit">
+          <input type="reset" id="resetButton" value="Borrar info" tabindex="-1">
+        </fieldset>
+      </form>
+    </div>
+    <!-- END FORM BODY -->
+</body>
+</html>
